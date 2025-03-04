@@ -4,7 +4,7 @@ import SubHeader from "../components/SubHeader";
 const SearchPage = () => {
   return (
     <div>
-      <SubHeader current="Search" detail />
+      <SubHeader current="Search"/>
     </div>
   );
 };
