@@ -46,6 +46,12 @@ const Header = () => {
               <i className="fa fa-address-card fa-lg" /> Contact
             </NavLink>
           </NavItem>
+
+          <NavItem>
+            <NavLink className="nav-link" to="/contact">
+              <i className="fa fa-sign-in fa-lg" /> Login
+            </NavLink>
+          </NavItem>
         </Nav>
       </Collapse>
     </Navbar>
