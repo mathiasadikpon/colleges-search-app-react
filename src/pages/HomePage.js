@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import SubHeader from "../components/SubHeader";
+import COLLEGESDATA from "../app/shared/COLLEGESDATA";
+import CollegeList from "../colleges/CollegeList";
 
 const HomePage = () => {
+  const [colleges, setColleges] = useState(COLLEGESDATA);
   return (
     <div>
       <SubHeader current="Home" />
@@ -14,6 +17,7 @@ const HomePage = () => {
               overview of your application and what it does. You can also
               provide links to other parts of your application.
             </p>
+            <CollegeList colleges={colleges} />
           </div>
         </div>
       </div>
