@@ -8,7 +8,7 @@ import {
   NavItem,
 } from "reactstrap";
 import { NavLink } from "react-router-dom";
-import CollegeLogo from "../app/assets/logolight3.webp";
+import CollegeLogo from "../app/assets/images/logolight3.webp";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
