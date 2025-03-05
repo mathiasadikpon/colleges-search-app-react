@@ -1,14 +1,16 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Card, CardBody, CardText, CardTitle, Col } from "reactstrap";
 
 const College = ({ college }) => {
-  const { name, city, state, country, no_of_students, courses, website } = college;
+  const { id, name, city, state, country, no_of_students, courses, website } = college;
 
   // State to track if the college is added
   const [isAdded, setIsAdded] = useState(false);
 
   return (
     <Col xs="12" sm="6" lg="3">
+      <Link to={`/${id}`}>
       <Card className="bg-primary text-white m-1">
         <CardBody>
           <CardTitle tag="h5">{name}</CardTitle>
@@ -32,10 +34,13 @@ const College = ({ college }) => {
               backgroundColor: isAdded ? "white" : "transparent",
               color: isAdded ? "green" : "white", 
             }}
-            onClick={() => setIsAdded(!isAdded)}
+            onClick={(e) => {
+              e.stopPropagation(); // Prevent card click from triggering navigation
+              setIsAdded(!isAdded)}}
           />
         </CardBody>
       </Card>
+      </Link>
     </Col>
   );
 };
