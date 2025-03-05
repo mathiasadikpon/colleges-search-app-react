@@ -10,7 +10,7 @@ import CollegeDetailPage from './pages/CollegeDetailPage';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-warning text-dark ">
 <Header/>
 <Routes>
   <Route path="/" element={<HomePage />} />
