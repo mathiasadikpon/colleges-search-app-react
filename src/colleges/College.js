@@ -22,7 +22,7 @@ const College = ({ college }) => {
       <Card
         body
         className="bg-primary text-white m-1"
-        style={{ minWidth: "33%" }}
+        // style={{ minWidth: "33%" }}
       >
         <CardBody>
           <Link
