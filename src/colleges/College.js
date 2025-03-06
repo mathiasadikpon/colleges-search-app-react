@@ -10,17 +10,17 @@ import {
   Col,
 } from "reactstrap";
 
-const College = ({ college }, {dispatch}) => {
+const College = ({ college, dispatch }) => {
   const { id, name, city, state, country, no_of_students, courses, website } =
     college;
 
   // State to track if the college is added
   const [isAdded, setIsAdded] = useState(false);
 
-  useEffect(() => {
-    dispatch({ type: isAdded ? "ADD" : "REMOVE", payload: college });
+  // useEffect(() => {
+  //   dispatch({ type: isAdded ? "ADD" : "REMOVE", payload: college });
 
-  },[isAdded])
+  // },[isAdded])
 
   return (
     <Col xs="12" sm="6" lg="4" className="p-2">
@@ -71,6 +71,7 @@ const College = ({ college }, {dispatch}) => {
             onClick={(e) => {
               e.stopPropagation(); // Prevent card click from triggering navigation
               setIsAdded(!isAdded);
+              dispatch({ type: isAdded ? "REMOVE" : "ADD", payload: college });
             }}
           />
         </CardFooter>
