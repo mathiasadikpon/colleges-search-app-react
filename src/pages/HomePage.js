@@ -1,13 +1,28 @@
-import React, { useState } from "react";
+import React, { useReducer, useState } from "react";
 import SubHeader from "../components/SubHeader";
 import {COLLEGESDATA} from "../app/shared/COLLEGESDATA";
 import CollegeList from "../colleges/CollegeList";
+import { Badge } from "reactstrap";
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "ADD":
+      return [...state, action.payload];
+    case "REMOVE":
+      return state.filter((college) => college.id !== action.payload.id);
+    default:
+      return state;
+
+  }}
 
 const HomePage = () => {
+  const [collegesSelected, dispatch] = useReducer(reducer, []);
   const [colleges, setColleges] = useState(COLLEGESDATA);
   return (
     <div style={{minHeight:"53vh"}}>
+      
       <SubHeader current="Home" />
+      <div>Colleges selected <Badge color="info" className="m-2"></Badge>{collegesSelected}</div>
       <div className="container">
         <div className="row">
           <div className="col">
@@ -26,7 +41,7 @@ const HomePage = () => {
                 - Click on the <i>Check</i> icon to remove the college from your favorites
               </h4>
             </p>
-            <CollegeList colleges={colleges} />
+            <CollegeList colleges={colleges} dispatch={dispatch}/>
           </div>
         </div>
       </div>

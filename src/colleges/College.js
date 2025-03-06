@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   Button,
@@ -10,12 +10,17 @@ import {
   Col,
 } from "reactstrap";
 
-const College = ({ college }) => {
+const College = ({ college }, {dispatch}) => {
   const { id, name, city, state, country, no_of_students, courses, website } =
     college;
 
   // State to track if the college is added
   const [isAdded, setIsAdded] = useState(false);
+
+  useEffect(() => {
+    dispatch({ type: isAdded ? "ADD" : "REMOVE", payload: college });
+
+  },[isAdded])
 
   return (
     <Col xs="12" sm="6" lg="4" className="p-2">
