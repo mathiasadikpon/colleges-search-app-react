@@ -19,7 +19,11 @@ const College = ({ college }) => {
 
   return (
     <Col xs="12" sm="6" lg="4" className="p-2">
-      <Card body className="bg-primary text-white m-1">
+      <Card
+        body
+        className="bg-primary text-white m-1"
+        style={{ minWidth: "33%" }}
+      >
         <CardBody>
           <Link
             to={`college/${id}`}
