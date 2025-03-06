@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <Navbar dark color="primary" sticky="top" expand="lg">
-      <NavbarBrand className="ms-5" href="/">
+      <NavbarBrand href="/">
         <img
           src={CollegeLogo}
           alt="college search logo"
