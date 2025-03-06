@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
+  Button,
   Card,
   CardBody,
   CardFooter,
@@ -18,31 +19,33 @@ const College = ({ college }) => {
 
   return (
     <Col xs="12" sm="6" lg="3" className="p-2">
-      <Card className="bg-primary text-white m-1 shadow">
-        <Link
-          to={`/${id}`}
-          className="text-white"
-          style={{ cursor: "default", textDecoration: "none" }}
-        >
-          <CardBody>
+      <Card body className="bg-primary text-white m-1 shadow">
+        <CardBody>
+          <Link
+            to={`/${id}`}
+            className="text-white"
+            style={{ cursor: "default", textDecoration: "none" }}
+          >
             <CardTitle tag="h5">{name}</CardTitle>
             <CardText>
               <strong>Location:</strong> {city}, {state}, {country} <br />
               <strong>Students:</strong> {no_of_students.toLocaleString()}{" "}
               <br />
               <strong>Courses:</strong> {courses.join(", ")} <br />
-              <strong>Website:</strong>{" "}
-              <a
-                href={website}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white"
-              >
-                {website}
-              </a>
             </CardText>
-          </CardBody>
-        </Link>
+          </Link>
+          <CardText>
+            <a
+              href={website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className=" btn btn-warning text-white"
+            >
+              <strong>Go To Website:</strong>
+            </a>
+          </CardText>
+        </CardBody>
+
         <CardFooter>
           {/* Clickable Icon with better contrast */}
           <i

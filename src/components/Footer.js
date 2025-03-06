@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="site-footer" sticky="botto" expand="md">
+    <footer className="site-footer" sticky="bottom" expand="md">
       <Container>
         <Row>
           <Col xs={{ size: 4, offset: 1 }} sm="2" className="text-white">

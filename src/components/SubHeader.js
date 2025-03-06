@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 const SubHeader = ({ current, detail }) => {
   return (
-    <Row>
-      <Col>
-        <Breadcrumb>
+    <Row >
+      <Col className="m-2">
+        <Breadcrumb >
           <BreadcrumbItem>
             <Link to="/">Home</Link>
           </BreadcrumbItem>
