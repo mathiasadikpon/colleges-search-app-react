@@ -7,15 +7,17 @@ import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import SearchPage from './pages/SearchPage';
 import CollegeDetailPage from './pages/CollegeDetailPage';
+import CollegeErrorPage from './pages/CollegeErrorPage';
 
 function App() {
   return (
-    <div className="App bg-warning text-dark ">
+    <div className="App  text-dark"  >
 <Header/>
-<Routes>
+<Routes >
   <Route path="/" element={<HomePage />} />
   <Route path="/search" element={<SearchPage />} />
-  <Route path="/:collegeId" element={<CollegeDetailPage />} />
+  <Route path="college/:collegeId" element={<CollegeDetailPage />} />
+  <Route path="*" element={<CollegeErrorPage  />} />
 
 </Routes>
 <Footer/>

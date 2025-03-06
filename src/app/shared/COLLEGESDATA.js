@@ -1,4 +1,4 @@
-const COLLEGESDATA = [
+export const COLLEGESDATA = [
   {
     id: 1,
     name: "Harvard University",
@@ -131,4 +131,4 @@ const COLLEGESDATA = [
   },
 ];
 
-export default COLLEGESDATA;
+

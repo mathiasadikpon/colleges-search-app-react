@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import SubHeader from "../components/SubHeader";
-import COLLEGESDATA from "../app/shared/COLLEGESDATA";
+import {COLLEGESDATA} from "../app/shared/COLLEGESDATA";
 import CollegeList from "../colleges/CollegeList";
 
 const HomePage = () => {
   const [colleges, setColleges] = useState(COLLEGESDATA);
   return (
-    <div>
+    <div style={{minHeight:"53vh"}}>
       <SubHeader current="Home" />
       <div className="container">
         <div className="row">

@@ -5,8 +5,8 @@ import College from "./College";
 const CollegeList = ({ colleges }) => {
   return (
     colleges &&
-    colleges.length > 0 && (
-      <Row className="m-1 p-3 bg-warning">
+    colleges.length && (
+      <Row className="m-1 ">
         {colleges.map((college, indx) => {
           return college && <College key={indx} college={college} />;
         })}

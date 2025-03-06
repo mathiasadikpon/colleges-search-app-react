@@ -18,11 +18,11 @@ const College = ({ college }) => {
   const [isAdded, setIsAdded] = useState(false);
 
   return (
-    <Col xs="12" sm="6" lg="3" className="p-2">
-      <Card body className="bg-primary text-white m-1 shadow">
+    <Col xs="12" sm="6" lg="4" className="p-2">
+      <Card body className="bg-primary text-white m-1">
         <CardBody>
           <Link
-            to={`/${id}`}
+            to={`college/${id}`}
             className="text-white"
             style={{ cursor: "default", textDecoration: "none" }}
           >

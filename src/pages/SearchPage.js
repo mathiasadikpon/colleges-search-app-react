@@ -3,7 +3,7 @@ import SubHeader from "../components/SubHeader";
 
 const SearchPage = () => {
   return (
-    <div>
+    <div style={{minHeight:"53vh"}}>
       <SubHeader current="Search"/>
     </div>
   );

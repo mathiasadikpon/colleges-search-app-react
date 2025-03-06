@@ -1,15 +1,21 @@
-import React from 'react'
-import { Container } from 'reactstrap'
-import SubHeader from '../components/SubHeader'
-import CollegeDetail from '../colleges/CollegeDetail'
+import React from "react";
+
+import SubHeader from "../components/SubHeader";
+import CollegeDetail from "../colleges/CollegeDetail";
 
 const CollegeDetailPage = () => {
   return (
-    <Container>
-        <SubHeader current="College Details"/>
-        <CollegeDetail />      
-    </Container>
-  )
-}
+    <div className="m-3" style={{minHeight:"53vh"}}>
+      <p>
+        <SubHeader current="College Details" />
+        <h4>
+          Welcome to details page. Here you can view the details of the college.
+        </h4>
+      </p>
 
-export default CollegeDetailPage
+      <CollegeDetail />
+    </div>
+  );
+};
+
+export default CollegeDetailPage;
