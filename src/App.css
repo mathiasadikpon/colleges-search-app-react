@@ -30,9 +30,13 @@ h2 {
 }
 
 .site-footer {
-  background-image: linear-gradient(#cec8ff, white);
+  /* background-image: linear-gradient(#cec8ff, white); */
+  background-image: linear-gradient(to right, #5637dd, #3046c5, #510e5a);
   padding: 20px 0;
   margin-top: 2rem;
+}
+.site-footer a{
+  color: white;
 }
 
 .navbar-brand {
@@ -74,7 +78,3 @@ h2 {
   transition: 300ms ease-in;
 }
 
-/* footer, footer Link, footer a{
-  color: white;
-  background-color: blue;
-} */
