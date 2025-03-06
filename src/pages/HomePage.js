@@ -21,10 +21,10 @@ const HomePage = () => {
   return (
     <div style={{ minHeight: "53vh" }}>
       <SubHeader current="Home" />
-      <div>
-        Colleges selected <Badge color="info" className="m-2"></Badge>
+      <h3>
+        Colleges selected <Badge color="info" className="m-10"></Badge>
         {collegesSelected.length}
-      </div>
+      </h3>
       <div className="container ">
         <div className="row">
           <div className="col">
