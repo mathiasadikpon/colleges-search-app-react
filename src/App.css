@@ -4,7 +4,7 @@ body {
 
 h1,
 h2,
-h3, 
+h3,
 .card-body > .card-title {
   font-family: "Lobster", cursive;
 }
@@ -39,7 +39,7 @@ h2 {
   width: 100%;
   height: auto; */
 }
-.site-footer a{
+.site-footer a {
   color: white;
 }
 
@@ -82,3 +82,20 @@ h2 {
   transition: 300ms ease-in;
 }
 
+.detail {
+  animation: mymove 10s infinite;
+}
+
+@keyframes mymove {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

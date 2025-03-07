@@ -21,25 +21,32 @@ const HomePage = () => {
   const [colleges, setColleges] = useState(COLLEGESDATA);
   return (
     <div style={{ minHeight: "53vh" }}>
-
       <SubHeaderHome current={"Home"} collegesSelected={collegesSelected} />
-      <div className="m-3">
-        <p>
-          <h4>
-            Welcome to College Search, your one-stop destination to find the
-            best colleges around the world. We have a vast collection of
-            colleges from various countries. You can search for colleges, view
-            their details, and add them to your favorites. We hope you find the
-            college of your dreams. Happy searching! <br />
-            Tip:
-            <br />
-            - Click on the college name to view more details <br />- Click on{" "}
-            <i>Go To Website</i> to visit the college website <br />- Click on
-            the <i>+</i> icon to add the college to your favorites
-            <br />- Click on the <i>Check</i> icon to remove the college from
-            your favorites
-          </h4>
-        </p>
+      <div
+        className="m-3"
+        style={{
+          cursor: "default",
+          minHeight: "30vh",
+          minWidth: "50vw",
+          display: "grid",
+          placeContent: "center",
+        }}
+      >
+        <h4>
+          Welcome to College Search, your one-stop destination to find the best
+          colleges around the world. We have a vast collection of colleges from
+          various countries. You can search for colleges, view their details,
+          and add them to your favorites. We hope you find the college of your
+          dreams. Happy searching! <br />
+          Tip:
+          <br />
+          - Click on the college name to view more details <br />- Click on{" "}
+          <i>Go To Website</i> to visit the college website <br />- Click on the{" "}
+          <i>+</i> icon to add the college to your favorites
+          <br />- Click on the <i>Check</i> icon to remove the college from your
+          favorites
+        </h4>
+
         <div>
           <CollegeList colleges={colleges} dispatch={dispatch} />
         </div>

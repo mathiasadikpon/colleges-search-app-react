@@ -8,10 +8,10 @@ const CollegeDetail = () => {
   const { name, city, state, country, no_of_students, courses, website } =
     college;
   return (
-    <Col md="5" className="m-1 text-center ">
+    <Col md="5" className="m-1 text-center detail">
       <Card
         className="bg-primary text-white m-1 "
-        style={{ cursor: "default", minHeight:"50vh", minWidth:"53vw" }}
+        style={{ cursor: "default", minHeight:"30vh", minWidth:"50vw",display:"grid", placeContent:"center" }}
       >
         <CardBody>
           <CardTitle tag="h5">{name}</CardTitle>
